@@ -1,0 +1,66 @@
+{
+  "name": "snow-api",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "await-stream-ready": "^1.0.1",
+    "body-parser": "^1.19.0",
+    "crypto": "^1.0.1",
+    "egg": "^2.15.1",
+    "egg-alinode": "^2.0.1",
+    "egg-cors": "^2.2.0",
+    "egg-mysql": "^3.0.0",
+    "egg-scripts": "^2.11.0",
+    "egg-sequelize": "^5.2.0",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.0",
+    "https": "^1.0.0",
+    "md5": "^2.2.1",
+    "moment": "^2.24.0",
+    "mysql2": "^1.6.5",
+    "nodemailer": "^6.4.2",
+    "q": "^1.5.1",
+    "request": "^2.88.0",
+    "stream-wormhole": "^1.1.0",
+    "xml2js": "^0.4.22"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.11.0",
+    "egg-mock": "^3.21.0",
+    "eslint": "^5.13.0",
+    "eslint-config-egg": "^7.1.0"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-snow-api --ignore-stderr --port=7001 --env=prod",
+    "stop": "egg-scripts stop --title=egg-server-snow-api",
+    "start_test": "egg-scripts start --daemon --title=egg-server-snow-api-test --ignore-stderr --port=7002 --env=test",
+    "stop_test": "egg-scripts stop --title=egg-server-snow-api-test",
+    "dev": "egg-bin dev --env=local",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "ci": {
+    "version": "10"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Topay",
+  "license": "MIT"
+}
